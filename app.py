@@ -8,7 +8,7 @@ from transformers import AutoTokenizer, AutoModelForCausalLM
 
 class InferlessPythonModel:
     def initialize(self):
-        self.tokenizer = AutoTokenizer.from_pretrained('tiiuae/falcon-7b')
+        self.tokenizer = AutoTokenizer.from_pretrained('tiiuae/falcon-7b-instruct')
         self.generator = pipeline(
             'text-generation',
             model='tiiuae/falcon-7b',
